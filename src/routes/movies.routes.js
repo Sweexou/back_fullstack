@@ -57,6 +57,13 @@ router.get("/", async (req, res) => {
  */
 router.get("/:id", async (req, res) => {
   try {
+
+    const rawId = req.params.id;
+const tmdbId = Number(rawId);
+
+if (!Number.isFinite(tmdbId)) {
+  return res.status(400).json({ message: "Invalid tmdbId" });
+}
     const movie = await Movie.findOne({ tmdbId: req.params.id });
 
     if (!movie) {
