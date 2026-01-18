@@ -68,6 +68,17 @@ JWT_EXPIRES_IN=1h
 
 ---
 
+
+## ▶️ Premier lancement du serveur
+
+Si il s'agit de la premiere fois merci d'éxecuter :
+
+```bash
+node src/scripts/importMovies.js
+```
+
+---
+
 ## ▶️ Lancer le serveur
 
 ```bash
